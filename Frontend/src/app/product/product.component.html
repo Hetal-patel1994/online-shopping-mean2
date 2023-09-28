@@ -1,0 +1,47 @@
+
+<!-- main Content -->
+<div class="container">
+  <div class="pt-7">
+    <div class="col-md-12">
+        <h4 class="pt-3">KC {{type}} Collection</h4>
+        <hr>
+    </div>
+<div class="row">
+    <div class="col-md-4 col-lg-3 col-sm-4 col-12 pt-3 pb-3" *ngFor="let item of businesses">
+
+            <div class="product-grid6">
+                    <div class="product-image6">
+                        <a>
+                            <img class="pic-1" src="{{item.fileupload}}">
+                            <span class="product-new-label">{{item.KC_Code}}</span>
+                        </a>
+                       
+                    </div>
+                    <div class="product-content">
+                       
+                       
+
+                        <h3 class="title">{{item.product}}</h3>
+                        <div class="row">
+                                <div class="col-md-6 col-6 col-sm-6 item_type text-left pr-0">Fabric : <b>{{item.fabric}}</b></div>
+                                <div class="col-md-6 col-6 col-sm-6 item_type text-right pl-0">Type : <b>{{item.work_type}}</b></div>
+                        </div>
+                            <!-- <span>Rs.{{item.price}}</span> -->
+                        </div>
+                   
+                    <!-- <ul class="social">
+                        <li><a data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul> -->
+                </div>
+      
+    </div>
+    
+</div>
+</div>
+</div>
+<hr>
+
+
+

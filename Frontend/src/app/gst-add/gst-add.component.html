@@ -1,0 +1,241 @@
+<section class="pt-7 pb-5">
+<div class="container">
+      
+   <div class="col-md-12">
+         
+      <div class="card ">
+            <div class="">
+                  <div class=" card-header bg-warning text-white">Add Product  <span><button style="float: right;line-height: 16px;padding: 3px 4px;" class=" btn btn-danger" routerLink="/business" routerLinkActive="active"><mat-icon>list_alt</mat-icon></button>
+                  </span></div>
+                 
+            </div>
+         <div class="card-body">
+            <form [formGroup]="angForm" novalidate>
+               <div class="row">
+                     <div class="col-md-3">
+                           <div class="form-group">
+                              <label class="col-md-12">Item Type<span class="text-red">*</span></label>
+                              <select formControlName="item_type" class="col-md-12 form-control" #item_type>
+                                 <option>Saree</option>
+                                 <option>Palazzo</option>
+                                 <option>Legging</option>
+                              </select>
+                              <div *ngIf="angForm.controls['item_type'].invalid && (angForm.controls['item_type'].dirty || angForm.controls['item_type'].touched)" class="col-md-12 alert alert-danger">
+                                 <div *ngIf="angForm.controls['item_type'].errors.required">
+                                    Item Type is Required.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                    
+                  <div class="col-sm-3">
+                     <div class="form-group">
+                       <label class="col-md-12">KC Code</label>
+                       <input type="text" class="col-md-12 form-control" formControlName="KC_Code" #KC_Code>
+                     </div>
+                     <div *ngIf="angForm.controls['KC_Code'].invalid && (angForm.controls['KC_Code'].dirty || angForm.controls['KC_Code'].touched)" class="col-md-12 alert alert-danger">
+                       <div *ngIf="angForm.controls['KC_Code'].errors.required">
+                         KC Code is Required.
+                       </div>
+                     </div>
+                     </div> 
+                     
+                  <div class="col-md-3">
+                     <div class="form-group">
+                        <label class="col-md-12">Product Name</label>
+                        <input type="text" class="col-md-12 form-control" formControlName="product" #product>
+                     </div>
+                     <div *ngIf="angForm.controls['product'].invalid && (angForm.controls['product'].dirty || angForm.controls['product'].touched)" class="col-md-12 alert alert-danger">
+                        <div *ngIf="angForm.controls['product'].errors.required">
+                           Product Name is Required.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="form-group">
+                        <label class="col-md-12">Fabric</label>
+                        <select formControlName="fabric" class="col-md-12 form-control" #fabric>
+                           <option>Cotton</option>
+                           <option>Silk</option>
+                           <option>PureSilk</option>
+                           <option>TussarSilk</option>
+                           <option>RawSilk</option>
+                           <option>Georgette</option>
+                           <option>Chiffon</option>
+                           <option>Organza</option>
+                           <option>--</option>
+                        </select>
+                        <div *ngIf="angForm.controls['fabric'].invalid && (angForm.controls['fabric'].dirty || angForm.controls['fabric'].touched)" class="col-md-12 alert alert-danger">
+                           <div *ngIf="angForm.controls['fabric'].errors.required">
+                              Fabric Name is Required.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="form-group">
+                        <label class="col-md-12">Work Type<span class="text-red">*</span></label>
+                        <select formControlName="work_type" class="col-md-12 form-control" #work_type>
+                           <option>Printed</option>
+                           <option>--</option>
+                           
+                        </select>
+                        <div *ngIf="angForm.controls['work_type'].invalid && (angForm.controls['work_type'].dirty || angForm.controls['work_type'].touched)" class="col-md-12 alert alert-danger">
+                           <div *ngIf="angForm.controls['work_type'].errors.required">
+                              Work Type is Required.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+
+
+
+                  <div class="col-md-3">
+                     <div class="form-group">
+                       <label class="col-md-12">Price</label>
+                       <input type="number" class="col-md-12 form-control" formControlName="price" #price/>
+                     </div>
+                     <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="col-md-12 alert alert-danger">
+                       <div *ngIf="angForm.controls['price'].errors.required">
+                         Price is Required.
+                       </div>
+                     </div>
+                     </div>
+
+
+
+                  <!-- <div class="col-md-3">
+                     <div class="form-group">
+                        <label class="col-md-12">File Upload</label>
+                        <input type="file" (change)="onFileChanged($event)" class="custom-file-input" formControlName="fileupload" #fileupload accept=".jpeg,.png,.jpg">
+                        <div class="image-preview">
+                              <img class="img-fluid img-thumbnail" src="{{imagePreview}}"  alt="Preview Image">
+                         </div>
+                         <div>{{selectedimage}}</div>
+                        <button class="btn btn-info" (click)="fileupload.click()">Upload</button>
+                     </div>
+                    
+                     <div *ngIf="angForm.controls['fileupload'].invalid && (angForm.controls['fileupload'].dirty || angForm.controls['fileupload'].touched)" class="col-md-12 alert alert-danger">
+                        <div *ngIf="angForm.controls['fileupload'].errors.required">
+                           fileupload is required.
+                        </div>
+                     </div>
+                  </div> -->
+
+
+
+                 <div class="col-md-3">
+                     <div class="form-group">
+                       <label class="col-md-12">Upload Image</label>
+                  <div id="fileSelector">
+                     <input type="file"  name="fileUplaod" id="fileUpload" accept=".jpeg,.png,.jpg"
+                      multiple ng2FileSelect [uploader]="uploader" >
+                  </div>
+                 
+                     <div class="row uploadList" *ngFor="let item of uploader.queue">
+                          <div class="col-sm-12">{{item.file.name}}</div>
+                          <div class="col-sm-12">
+                              <div class="progress mt-2 mb-2">
+                                  <div class="progress-bar bg-success" 
+                                  [ngStyle]="{'width':item.progress+'%'}"></div>
+                              </div>
+                              <div class="col-sm-12">
+                              <button type="button" class="btn btn-dark m-2" (click)="item.upload()">Upload</button>
+                              <button type="button" class="btn btn-danger m-2" (click)="item.remove()">Cancel</button>
+                           </div>
+                           </div>
+                     </div>
+                 </div>
+                  </div>  
+
+                  <div class="col-sm-3">
+                        <div class="form-group">
+                              <label class="col-md-12">Preview Uploaded Image</label>
+                              <div class="image-preview">
+                                    <img class="img-fluid img-thumbnail" src="{{imagePreview}}" alt="Preview Image" style="width:100%;height:200px;">
+                               </div>
+                         </div>
+                         
+                  </div>
+
+               
+                    
+                     <div class="col-md-12">
+                     <div class="form-group text-center">
+                        <button (click)="addBusiness(item_type.value,KC_Code.value,product.value, fabric.value, work_type.value, price.value)"
+                        [disabled]="angForm.pristine || angForm.invalid" 
+                        class="btn btn-warning text-white">Add Item</button>
+                     </div>
+                  </div>
+               </div>
+              
+            </form>
+         </div>
+       </div>
+   </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="container-fluid">
+   <div class="row header-section">
+       <span>Angular 4/5 Nodejs File Upload Download Sample</span>
+   </div>
+
+   <div class="row">
+       <div class="col-md-2"></div>
+       <div class="col-md-8">
+           <div class="row card">
+               <div class="col-sm-12">
+                   
+                           <div class="col-sm-4">
+                                   <button type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>
+                                   <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+                           </div>
+                       </div>                        
+                   </div>
+                   <div class="row" *ngIf="uploader?.queue?.length > 0">
+                           <button type="button" class="btn btn-primary" (click)="uploader.uploadAll()">Upload All</button>
+                   </div>
+               </div>                
+           </div>
+           </div>
+           </div>
+           </div> -->
+           

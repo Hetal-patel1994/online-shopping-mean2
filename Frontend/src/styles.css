@@ -1,0 +1,168 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
+.dropdown-menu
+{
+    background-color: #000!important;
+    padding: 0px!important;
+}
+.dropdown-item
+{
+    color: #fff!important;
+}
+.dropdown-item:focus, .dropdown-item:hover
+{
+    background-color: #0297ff!important;
+}
+.flexslider
+{
+    border:none!important;  
+    margin: 0 0 10px!important;
+}
+.flex-control-nav
+{
+bottom: -18px!important;
+}
+.KC_bg_light
+{
+    background-color: #f9f9f9!important; 
+}
+.KC_bg_dark
+{
+    background-color: #f3f3f3!important; 
+}
+.common 
+{
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+.color_creation
+{
+    color: #0297ff;
+}
+.tag{
+    font-style: italic;
+    font-size: 48px;
+    font-weight: bold;
+}
+.tag_info
+{
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+}
+.card-body
+{
+    background-color: #f5f5f5
+}
+.btn-width
+{
+	min-width:100px;
+}
+.pt-7
+{
+    padding-top: 5rem;
+}
+.showmore
+{
+    display: inline;
+    font-size: 15px;
+    float: right;
+}
+.item_type
+{
+    color: grey;
+    font-size: 12px;
+}
+label {
+    font-size: 14px;
+    color: darkslategrey;
+    font-weight: 500;
+}
+.card-header{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/********************* Shopping Demo-6 **********************/
+.product-grid6,.product-grid6 .product-image6{overflow:hidden}
+.product-grid6{box-shadow: 0 0 5px rgba(0,0,0,.1);font-family:'Open Sans',sans-serif;text-align:center;position:relative;transition:all .5s ease 0s}
+.product-grid6:hover{box-shadow:0 0 10px rgba(0,0,0,.3)}
+.product-grid6 .product-image6 a{display:block}
+.product-grid6 .product-image6 img{width:100%;height:250px;transition:all .5s ease 0s}
+.product-grid6:hover .product-image6 img{transform:scale(1.1)}
+.product-grid6 .product-content{padding:12px 12px 15px;transition:all .5s ease 0s;background-color: #fff;}
+/* .product-grid6:hover .product-content{opacity:0} */
+.product-grid6 .title{font-size:16px;font-weight:600;text-transform:capitalize;margin:0 0 10px;transition:all .3s ease 0s;color:#0074bd;}
+.product-grid6 .title a{color:#000}
+.product-grid6 .title a:hover{color:#2e86de}
+.product-grid6 .price{font-size:18px;font-weight:600;color:#2e86de}
+.product-grid6 .price span{color:#999;font-size:15px;font-weight:400;text-decoration:line-through;margin-left:7px;display:inline-block}
+/* .product-grid6 .social{background-color:#fff;width:100%;padding:0;margin:0;list-style:none;opacity:0;transform:translateX(-50%);position:absolute;bottom:-50%;left:50%;z-index:1;transition:all .5s ease 0s}
+.product-grid6:hover .social{opacity:1;bottom:20px}
+.product-grid6 .social li{display:inline-block}
+.product-grid6 .social li a{color:#909090;font-size:16px;line-height:45px;text-align:center;height:45px;width:45px;margin:0 7px;border:1px solid #909090;border-radius:50px;display:block;position:relative;transition:all .3s ease-in-out}
+.product-grid6 .social li a:hover{color:#fff;background-color:#2e86de;width:80px}
+.product-grid6 .social li a:after,.product-grid6 .social li a:before{content:attr(data-tip);color:#fff;background-color:#2e86de;font-size:12px;letter-spacing:1px;line-height:20px;padding:1px 5px;border-radius:5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
+.product-grid6 .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-20px;z-index:-1}
+.product-grid6 .social li a:hover:after,.product-grid6 .social li a:hover:before{opacity:1} */
+.product-new-label{color:#fff;background-color:#0297ff;font-size:12px;text-transform:uppercase;padding:2px 7px;display:block;position:absolute;top:10px;left:0}
+@media only screen and (max-width:990px){.product-grid6{margin-bottom:30px}
+}
+
+
+.flex-viewport
+{
+    height: 385px;
+}
+
+
+
+/* Dialog CSS */
+
+
+
+.mat-dialog-container
+{
+    padding: 0px!important;
+    overflow: inherit!important;
+}
+.mat-dialog-title
+{
+    margin: 0px!important;
+    background-color: tomato;
+   
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+    padding: 3px 10px!important;
+    color:#fff;
+}
+.mat-dialog-content {
+    margin: 0 0px!important;
+    padding: 20px 10px!important;
+    font-size: 20px!important;
+}
+.mat-dialog-actions .mat-button+.mat-button, .mat-dialog-actions .mat-button+.mat-raised-button, .mat-dialog-actions .mat-raised-button+.mat-button, .mat-dialog-actions .mat-raised-button+.mat-raised-button
+{
+    /* background-color: #ab9459;
+    background-image: linear-gradient(69deg, #ab9459, #e7d8a3); 
+    padding: 10px 12px!important;*/
+}
+.mat-dialog-actions
+{
+    padding: 10px!important;
+    border-top: 1px solid #eee;
+}
+.mat-button .mat-button-wrapper>*, .mat-fab .mat-button-wrapper>*, .mat-icon-button .mat-button-wrapper>*, .mat-mini-fab .mat-button-wrapper>*, .mat-raised-button .mat-button-wrapper>*
+{
+    margin: 5px 4px;
+}
+.mat-button, .mat-fab, .mat-flat-button, .mat-icon-button, .mat-mini-fab, .mat-raised-button, .mat-stroked-button
+{
+    line-height: 30px!important;
+    text-transform: uppercase;
+    background-color: #ccc!important;
+    color: #fff!important;
+}

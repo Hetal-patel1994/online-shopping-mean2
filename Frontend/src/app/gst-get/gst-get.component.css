@@ -1,0 +1,30 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  .mat-row:nth-child(even){
+    background-color: rgba(0,0,0,.05);
+    }
+
+.mat-row:nth-child(odd){
+  background-color: rgba(0,0,0,.01);
+    }
+  th.mat-header-cell
+  {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px!important;
+  }
+  .mat-cell
+  {
+    padding: 5px 10px!important;
+    border: 1px solid #dee2e6;
+  }
+  table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }

@@ -1,0 +1,275 @@
+
+<!-- Swiper Silder
+================================================== --> 
+
+<!-- 
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+            <img src="assets/images/header1.jpg" class="img-responsive" alt="Random third slide">
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+      
+    </ng-template>
+    <ng-template ngbSlide>
+            <img src="assets/images/header2.jpg" class="img-responsive" alt="Random third slide">
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+    </ng-template>
+     <ng-template ngbSlide>
+      <img src="assets/images/header1.jpg" class="img-responsive" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="overlay">
+
+     
+      <div class="bg-img"  style="background: url('assets/images/header1.jpg');">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="tag">Art of <span class="color_creation">Creation</span></h1>
+            <p class="tag_info">If a picture is worth a thousand words, a prototype is worth a thousand meetings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="overlay">
+
+     
+      <div class="bg-img"  style="background: url('assets/images/header2.jpg');">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="tag">Art of <span class="color_creation">Fashion</span></h1>
+            <p class="tag_info">We must design for the way people behave,
+              not for how we would wish them to behave.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div> -->
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Slider main container -->
+<!-- <div class="swiper-container main-slider" id="myCarousel">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide slider-bg-position" style="background:url('http://grafreez.com/wp-content/temp_demos/burnout/img/1.jpg')" data-hash="slide1">
+    <h2>It is health that is real wealth and not pieces of gold and silver</h2>
+    </div>
+    <div class="swiper-slide slider-bg-position" style="background:url('http://grafreez.com/wp-content/temp_demos/burnout/img/3.jpg')" data-hash="slide2">
+    <h2>Happiness is nothing more than good health and a bad memory</h2>
+    </div>
+    </div>
+ 
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+    </div> -->
+
+
+
+<!-- Place somewhere in the <body> of your page -->
+
+        
+<section class="KC_bg_light">
+    <div class="container">
+        <div class="py-3">
+            <div class="col-md-12">
+                <h5 class="pt-3">KC Saree Collections <a class="nav-link showmore" [routerLink]="['/product', 'Saree']">Show More</a></h5>
+                <hr>
+            </div>
+    <div class="flexslider carousel KC_bg_light">
+        <ul class="slides">
+          <li *ngFor="let item of saree">
+                <div class="product-grid6">
+                        <div class="product-image6">
+                            <a>
+                                <img class="pic-1" style="height:280px;" src="{{item.fileupload}}">
+                                <span class="product-new-label">{{item.KC_Code}}</span>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                           
+                           
+    
+                            <h3 class="title">{{item.product}}</h3>
+                            <div class="row">
+                                    <div class="col-md-6 item_type text-left">Fabric : <b>{{item.fabric}}</b></div>
+                                    <div class="col-md-6 item_type text-right">Type : <b>{{item.work_type}}</b></div>
+                            </div>
+                                <!-- <span>Rs.{{item.price}}</span> -->
+                            </div>
+                       
+                    </div>
+          </li>
+       
+          <!-- items mirrored twice, total of 12 -->
+        </ul>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+        
+    <section class="KC_bg_dark">
+      <div class="container">
+          <div class="py-3">
+              <div class="col-md-12">
+                  <h5 class="pt-3">KC Legging Collections<a class="nav-link showmore" [routerLink]="['/product', 'Legging']" >Show More</a></h5>
+                  <hr>
+              </div>
+      <div class="flexslider carousel KC_bg_dark">
+          <ul class="slides">
+            <li *ngFor="let item of legging">
+                  <div class="product-grid6">
+                          <div class="product-image6">
+                              <a>
+                                  <img class="pic-1" style="height:280px;" src="{{item.fileupload}}">
+                                  <span class="product-new-label">{{item.KC_Code}}</span>
+                              </a>
+                          </div>
+                          <div class="product-content">
+                             
+                             
+      
+                              <h3 class="title">{{item.product}}</h3>
+                              <div class="row">
+                                      <div class="col-md-6 item_type text-left">Fabric : <b>{{item.fabric}}</b></div>
+                                      <div class="col-md-6 item_type text-right">Type : <b>{{item.work_type}}</b></div>
+                              </div>
+                                  <!-- <span>Rs.{{item.price}}</span> -->
+                              </div>
+                         
+                      </div>
+            </li>
+         
+            <!-- items mirrored twice, total of 12 -->
+          </ul>
+          </div>
+        </div>
+      </div>
+      </section>
+  
+
+
+      <section class="KC_bg_light">
+        <div class="container">
+            <div class="py-3">
+                <div class="col-md-12">
+                    <h5 class="pt-3">KC Palazzo Collections <a class="nav-link showmore" [routerLink]="['/product', 'Palazzo']">Show More</a></h5>
+                    <hr>
+                </div>
+        <div class="flexslider carousel KC_bg_light">
+            <ul class="slides">
+              <li *ngFor="let item of palazzo">
+                    <div class="product-grid6">
+                            <div class="product-image6">
+                                <a>
+                                    <img class="pic-1" style="height:280px;" src="{{item.fileupload}}">
+                                    <span class="product-new-label">{{item.KC_Code}}</span>
+                                </a>
+                            </div>
+                            <div class="product-content">
+                               
+                               
+        
+                                <h3 class="title">{{item.product}}</h3>
+                                <div class="row">
+                                        <div class="col-md-6 item_type text-left">Fabric : <b>{{item.fabric}}</b></div>
+                                        <div class="col-md-6 item_type text-right">Type : <b>{{item.work_type}}</b></div>
+                                </div>
+                                    <!-- <span>Rs.{{item.price}}</span> -->
+                                </div>
+                           
+                        </div>
+              </li>
+           
+              <!-- items mirrored twice, total of 12 -->
+            </ul>
+            </div>
+          </div>
+        </div>
+        </section>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    
+  </script>

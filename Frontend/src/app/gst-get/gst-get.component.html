@@ -1,0 +1,95 @@
+<section class="pt-7 pb-5">
+    <div class="container">
+       <div class="col-md-12">
+            <a class="btn btn-warning text-white" routerLink="/create" routerLinkActive="active">Add Product</a>
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+
+            <div class="example-container mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" matSort >
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="Sr. No">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sr. No </th>
+                    <td mat-cell *matCellDef="let element = index"> {{element+1}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Item_type">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Type </th>
+                        <td mat-cell *matCellDef="let element"> {{element.item_type}} </td>
+                      </ng-container>
+
+                   <ng-container matColumnDef="KC_Code">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> KC_Code </th>
+                    <td mat-cell *matCellDef="let element"> {{element.KC_Code}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Product">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+                    <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Fabric">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Fabric </th>
+                    <td mat-cell *matCellDef="let element"> {{element.fabric}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Type">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+                    <td mat-cell *matCellDef="let element"> {{element.work_type}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Image">
+                    <th mat-header-cell *matHeaderCellDef> Image </th>
+                    <td mat-cell *matCellDef="let element" style="padding:5px;"> <img src="{{ element.fileupload }}" style="height:55px;width:55px;"> </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Edit">
+                    <th mat-header-cell *matHeaderCellDef> Edit </th>
+                    <td mat-cell *matCellDef="let element"><a [routerLink]="['edit', element._id]" class="btn btn-primary" style="padding: 2px 5px;line-height: normal;"><mat-icon>edit</mat-icon></a></td>
+                  </ng-container>
+                  <ng-container matColumnDef="Delete">
+                    <th mat-header-cell *matHeaderCellDef> Delete </th>
+                    <td mat-cell *matCellDef="let element"><a (click) = "OnDeleteScrip(element._id)" class="btn btn-danger" style="padding: 2px 5px;line-height: normal;color:#fff;"><mat-icon>delete_forever</mat-icon></a></td>
+                  </ng-container>
+              
+                  
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              </div>
+
+
+            <!-- <div class="table-responsive-sm">
+           <table class="table table-hover table-striped table-bordered fixed_header">
+  <thead class="thead-light">
+  <tr>
+      <th>Sr. No</th>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Material</th>
+      <th>Image</th>
+      <th>Edit</th>
+      <th>Delete</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let data of businesses; let i = index">
+            <td>{{i+1}}</td>
+          <td>{{ data.product_name }}</td>
+          <td>{{ data.category_name }}</td>
+          <td>{{ data.material_name }}</td>
+          <td style="padding: 5px;"><img src="{{ data.fileupload }}" style="height:55px;width:55px;"></td>
+       
+          <td><a [routerLink]="['edit', data._id]" class="btn btn-primary">Edit</a></td>
+          <td><a (click) = "OnDeleteScrip(data._id)" class="btn btn-danger">Delete</a></td>
+      </tr>
+  </tbody>
+</table>
+</div> -->
+</div>
+</div>
+</section>
